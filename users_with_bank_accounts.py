@@ -1,16 +1,3 @@
-class User:
-    def __init__(self, name, email):
-        self.name = name
-        self.email = email
-        self.account = BankAccount(int_rate=0.02, balance=0)
-    
-    # other methods
-    
-    def make_deposit(self, amount):
-    	# your code here
-
-
-
 class BankAccount:
 
     def __init__(self, int_rate = .01, balance = 0):
@@ -29,6 +16,19 @@ class BankAccount:
     def yield_interest(self):
         self.balance += (self.balance * self.int_rate)
         return self
+
+class User:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate=0.02, balance=0)
+    
+    def make_deposit(self, amount):
+        self.BankAccount.deposit()
+    def make_withdrawal(self, amount):
+        self.BankAccount.withdrawal()
+    def display_user_balance(self):
+        self.BankAccount.display_user_balance()
 
 account1 = BankAccount()
 account2 = BankAccount()
